@@ -1,39 +1,38 @@
 /*
-CLI TOOL SPECIFICATION
+CLI TOOL SPECIFICATION:
+
+USAGE: $ node index.js [COMMAND] (parameters)
+
 # Never reach the bottom area
 
 $ node index.js add 5 6 7 8 #returns 26
 
-$ node index.js subtract 5 6 7 8 #returns “Sorry, we didn’t implement 'subtract' yet!”
-
-$ node index.js aaabb #returns ”Sorry, we didn’t implement ‘aaabb’ yet!’
+$ node index.js xxyyyzzz #returns ”Sorry, we didn’t implement 'xxyyyzzz' yet!"
 
 $ node index.js help # returns "Please enter a command and parameters"
 
 $ node index.js add 5 6 7 anyotherstring 8 #returns sorry parameters must be numbers
 
+
 #If the result is less than 4 make the text red, 
 #If the result is less greater than 5 make it green,
 #If the sum is exactly 4 make it yellow background, blue text
-
-
-$ node index.js add 5 6 7 anyotherstring 8 #returns Sorry no strings except LOL, lol!!
+#If there's some type of error or problem make it red
 */
 
-var fullInput = process.argv;
+var fullInput;
+var params;
+var command;
+command = command.toLowerCase();
 
-var params = fullInput.slice(2);
-var command = params.shift();
-command = typeof command === 'string' ? command.toLowerCase() : null;
-
-console.log(params);
+console.log('Here are the parameters', params);
 
 
-var commandLookup = {
+var commandLookupHash = {
 	"help":"Please enter a command and parameters",
 	"add": function() {
 	var sum = 0;
-	for (var i = 0; i < arguments.length; i++){
+	for (var i = 0; i < arguments.lenght; i++){
 		sum += arguments[i];
 	}
 	return sum;
@@ -41,8 +40,8 @@ var commandLookup = {
 };
 
 
-if (commandLookup[command] === undefined) {
-	return console.log('Please enter a command and parameters');
+if (commandLookupHash[command] === undefined) {
+	console.log('Please enter a command and parameters');
 } else {
 
 }
@@ -90,8 +89,9 @@ if (commandLookup[command] === undefined) {
 ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝
 Can't delete anything below this line
 */
+console.log('######################################################');
 console.log("******WE SHOULD NEVER SEE THIS CONSOLE.LOG******");
-
+console.log('######################################################');
 var breakyourapp = null;
 
-null.push('oops.');
+breakyourapp.push('oops.');
