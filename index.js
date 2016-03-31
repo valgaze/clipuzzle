@@ -24,9 +24,9 @@ $ node index.js add #returns "ERROR: No parameters provided"
 
 */
 
-var fullInput;
-var params;
-var command;
+var fullInput = process.argv;
+var params = fullInput.slice(2);
+var command = params.shift();
 command = command ? command.toLowerCase() : null;
 
 console.log('Here are the parameters', params);
@@ -36,8 +36,10 @@ var commandLookupHash = {
 	"help":"Please enter a command and parameters",
 	"add": function() {
 	var sum = 0;
-	for (var i = 0; i < arguments.lenght; i++){
-		sum += arguments[i];
+	var myargs = Array.prototype.slice.call(arguments)[0];
+	myargs = arguments[0];
+	for (var i = 0; i < myargs.length; i++){
+		sum += Number(myargs[i]);
 	}
 	return sum;
 	}
@@ -47,7 +49,11 @@ var commandLookupHash = {
 if (commandLookupHash[command] === undefined) {
 	return console.log('ERROR: No command entered');
 } else {
-
+	if (typeof commandLookupHash[command] === 'function') {
+		return console.log(commandLookupHash[command](params))
+	} else {
+		return console.log(commandLookupHash[command]);
+	}
 }
 
 
