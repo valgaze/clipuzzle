@@ -5,13 +5,15 @@ USAGE: $ node index.js [COMMAND] (parameters)
 
 # Never reach the bottom area
 
+$ node index.js #returns "ERROR: No command entered"
+
 $ node index.js add 5 6 7 8 #returns 26
 
-$ node index.js xxyyyzzz #returns ”Sorry, we didn’t implement 'xxyyyzzz' yet!"
+$ node index.js xxyyyzzz 5 6 7 8#returns ”Sorry, we didn’t implement 'xxyyyzzz' yet!"
 
-$ node index.js help # returns "Please enter a command and parameters"
+$ node index.js help #returns "Please enter a command and parameters"
 
-$ node index.js add 5 6 7 string 8 #returns "ERROR: Sorry parameters must be numbers!"
+$ node index.js add 5 6 7 somestring 8 #returns "ERROR: Sorry parameters must be numbers!"
 
 $ node index.js add #returns "ERROR: No parameters provided"
 
