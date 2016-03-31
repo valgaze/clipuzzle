@@ -7,9 +7,11 @@ USAGE: $ node index.js [COMMAND] (parameters)
 
 $ node index.js add 5 6 7 8 #returns 26
 
+$ node index.js #returns "ERROR: No command entered"
+
 $ node index.js xxyyyzzz #returns ”Sorry, we didn’t implement 'xxyyyzzz' yet!"
 
-$ node index.js help # returns "Please enter a command and parameters"
+$ node index.js help #returns "Please enter a command and parameters"
 
 $ node index.js add 5 6 7 string 8 #returns "ERROR: Sorry parameters must be numbers!"
 
@@ -25,7 +27,7 @@ $ node index.js add #returns "ERROR: No parameters provided"
 var fullInput;
 var params;
 var command;
-command = command.toLowerCase();
+command = command ? command.toLowerCase() : null;
 
 console.log('Here are the parameters', params);
 
@@ -43,7 +45,7 @@ var commandLookupHash = {
 
 
 if (commandLookupHash[command] === undefined) {
-	console.log('Please enter a command and parameters');
+	return console.log('ERROR: No command entered');
 } else {
 
 }
