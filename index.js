@@ -11,13 +11,15 @@ $ node index.js xxyyyzzz #returns ”Sorry, we didn’t implement 'xxyyyzzz' yet
 
 $ node index.js help # returns "Please enter a command and parameters"
 
-$ node index.js add 5 6 7 anyotherstring 8 #returns sorry parameters must be numbers
+$ node index.js add 5 6 7 string 8 #returns "ERROR: Sorry parameters must be numbers!"
 
+$ node index.js add #returns "ERROR: No parameters provided"
 
-#If the result is less than 4 make the text red, 
+#If the result is less than 4 make the text cyan, 
 #If the result is less greater than 5 make it green,
 #If the sum is exactly 4 make it yellow background, blue text
-#If there's some type of error or problem make it red
+#If there's some type of error or problem give it red text
+
 */
 
 var fullInput;
