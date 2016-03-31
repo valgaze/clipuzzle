@@ -36,10 +36,13 @@ $ node index.js add 5 6 7 string 8 #returns "ERROR: Sorry parameters must be num
 $ node index.js add #returns "ERROR: No parameters provided"
 
 ~~Color~~
-#If the result is less than 4 make the text green
-#If the result is exactly 4 make it yellow background with blue text
-#If the result is greater than 4, don't style it
-#If there's some type of error or problem give it red text
+* If the result is less than 4 make the text green
+
+* If the result is exactly 4 make it yellow background with blue text
+
+* If the result is greater than 4, don't style it
+
+* If there's some type of error or problem give it red text
 
 For reference, you can use a compiled version of this CLI tool available globally as interviewDay to see the output
 
