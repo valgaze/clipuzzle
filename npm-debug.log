@@ -1,0 +1,43 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install', '-g' ]
+2 info using npm@2.14.12
+3 info using node@v4.2.6
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/victor/interviewDay',
+8 silly cache add   type: 'directory' }
+9 error addLocal Could not install /Users/victor/interviewDay
+10 verbose stack Error: Failed to parse json
+10 verbose stack Unexpected token '}' at 9:21
+10 verbose stack   "bin":{"clifun.js"}
+10 verbose stack                     ^
+10 verbose stack     at parseError (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:379:11)
+10 verbose stack     at parseJson (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:68:23)
+10 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
+10 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:76:16
+10 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:380:3)
+11 verbose cwd /Users/victor/interviewDay
+12 error Darwin 15.3.0
+13 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g"
+14 error node v4.2.6
+15 error npm  v2.14.12
+16 error file /Users/victor/interviewDay/package.json
+17 error code EJSONPARSE
+18 error Failed to parse json
+18 error Unexpected token '}' at 9:21
+18 error   "bin":{"clifun.js"}
+18 error                     ^
+19 error File: /Users/victor/interviewDay/package.json
+20 error Failed to parse package.json data.
+20 error package.json must be actual JSON, not just JavaScript.
+20 error
+20 error This is not a bug in npm.
+20 error Tell the package author to fix their package.json file. JSON.parse
+21 verbose exit [ 1, true ]
