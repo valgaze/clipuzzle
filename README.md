@@ -13,12 +13,15 @@ $ git clone https://github.com/valgaze/clipuzzle clipuzzle && cd $_ && git check
 
 Each administration of the challenge should be from the START branch-- interviewDay will be a CLI tool globally available for student to see a reference implementation. The student will need to build a CLI following the instructions and come up with solutions to issues along the way (ex avoid the "shark pit" at the bottom, deal with the arguments object, cast strings to numbers, learn some pointers about parseInt vs Number, read documentation to see how to use an included library (node_modules checked into this repo) to color terminal text, etc etc
 
+
+Instructions provided to student:
+
 #CLI TOOL SPECIFICATION:
 
 USAGE: $ node index.js [COMMAND] (parameters)
 NOTE: Paremeters should only be positive integers
 
-# Never reach the bottom area
+Never touch the bottom area
 
 $ node index.js add 5 6 7 8 #returns 26
 
