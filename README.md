@@ -7,7 +7,7 @@ Tricky puzzle repo to evaluate debugging &amp; problem-solving ability
 ##Setup command line tool
 
 ```bash
-$ https://github.com/valgaze/puzzle.git && git checkout attempt1 && npm install -g && git checkout start
+$ git clone https://github.com/valgaze/puzzle.git && git checkout attempt1 && npm install -g && git checkout start
 ```
 
 Each administration of the challenge should be from the START branch-- interviewDay will be a CLI tool available to see a reference implementation without code
