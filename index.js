@@ -43,6 +43,8 @@ console.log('Here are the parameters', params);
 var commandLookupHash = {
 	"help":"[HELP] Please enter a command and parameters",
 	"add": function() {
+	//Something is a little weird here-- maybe there are tyspos?
+	//Where do we put the parameters? What are the parameters?
 	var sum = 0;
 	for (var i = 0; i < arguments.lenght; i++){
 		sum += arguments[i];
@@ -52,11 +54,15 @@ var commandLookupHash = {
 };
 
 
-if (commandLookupHash[command] === undefined) {
-	console.log('Please enter a command and parameters');
+if (!command) {
+	console.log('ERROR: No command entered');
+} else if (commandLookupHash[command] === undefined)  {
+	console.log(`Sorry, we didn’t implement '${command}' yet!`);
 } else {
-
+	//??
 }
+
+
 
 
 
@@ -99,7 +105,7 @@ if (commandLookupHash[command] === undefined) {
 ██║  ██║██╔══██║██║╚██╗██║██║   ██║██╔══╝  ██╔══██╗     ███╔╝  ██║   ██║██║╚██╗██║██╔══╝  ╚═╝
 ██████╔╝██║  ██║██║ ╚████║╚██████╔╝███████╗██║  ██║    ███████╗╚██████╔╝██║ ╚████║███████╗██╗
 ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝
-Can't delete anything below this line
+Don't delete/modify anything below this line
 */
 console.log('######################################################');
 console.log("******WE SHOULD NEVER SEE THIS CONSOLE.LOG******");
